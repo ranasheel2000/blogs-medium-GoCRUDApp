@@ -1,0 +1,4 @@
+{
+dsn := "host=localhost user=root password=secret dbname=data_bank port=5432 sslmode=disable TimeZone=Asia/Tokyo"
+}
+

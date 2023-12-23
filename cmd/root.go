@@ -1,16 +1,15 @@
 /*
 Copyright © 2023 SHEEL RANA <RANASHEEL2000@GMAIL.COM>
-
 */
 package cmd
 
 import (
 	"os"
 
+	"github.com/ranasheel2000/blogs-medium-GoCRUDApp/cmd/mom"
+	"github.com/ranasheel2000/blogs-medium-GoCRUDApp/cmd/todo"
 	"github.com/spf13/cobra"
 )
-
-
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
@@ -45,7 +44,7 @@ func init() {
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
+	rootCmd.AddCommand(todo.TodoCmd)
+	rootCmd.AddCommand(mom.MomCmd)
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
-
-

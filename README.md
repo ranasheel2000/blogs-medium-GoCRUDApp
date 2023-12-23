@@ -1,4 +1,45 @@
-APIs
+Go Setup for project:
+- Install go from:
+	- installation path: /usr/local/go
+	- GOPATH: /Users/rana/Desktop/work/GOLANG
+	- GOROOT: /usr/local/go
+	- export PATH=$PATH:/usr/local/go/bin
+- set bash profile:
+	- rana@Sheels-MacBook-Pro % cat ~/.bash_profile
+		export GOPATH="/Users/rana/Desktop/work/GOLANG"
+		export GOROOT="/usr/local/go"
+- init module
+##INIT
+	- git clone git@github.com:ranasheel2000/blogs-medium-GoCRUDApp.git
+	- go mod init github.com/ranasheel2000/blogs-medium-GoCRUDApp
+##download depedencies:
+	- go get -u github.com/spf13/viper
+	- go get -u github.com/gorilla/mux
+	- go get -u gorm.io/gorm
+	- gorm.io/driver/postgres
+##Setup project directories:        
+	- mkdir configs #For App configurations.
+	- mkdir deployments #For DevOps stuff.
+	- mkdir docs #For project documents.
+	- mkdir test #For unit tests.
+	- mkdir cmd #Main directory for application code.
+	- mkdir -p web/app #For frontend-javascript/react etc.
+	- mkdir -p web/static #For static file like images etc.
+	- mkdir -p web/template #For html, yaml files etc.
+
+- init cobra cli
+	- go get -u github.com/spf13/cobra@latest
+	- go install github.com/spf13/cobra-cli@latest
+	- cobra-cli init #It will create root.go inside cmd directory and main.go in current directory.	
+
+
+rana@Sheels-MacBook-Pro % pwd
+/Users/rana/Desktop/work/GoLang/blogs-medium-GoCRUDApp
+
+
+
+ 
+##APIs
 
 ToDo Items | 
 --- |
